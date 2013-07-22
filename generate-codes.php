@@ -3,7 +3,7 @@
 /* Generate Codes v1.0 */
 
 /**
- * This script generates an unique amount of readable codes
+ * This script generates an unique amount of human readable codes
  * Author: Igor Buyanov
  */
  
@@ -15,7 +15,7 @@ $settings['amount_of_letters']	= 4;
 $settings['amount_of_numbers']	= 2;
 
 // Some characters intentionally left out to enhance code readability
-$settings['chars']		= "abcdefghjklmnpqrstuvwxyz";
+$settings['chars']	= "abcdefghjklmnpqrstuvwxyz";
 $settings['numbers']	= "23456789";
 
 
