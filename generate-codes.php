@@ -3,7 +3,7 @@
 /* Generate Codes v1.0 */
 
 /**
- * This script generates an unique amount of human readable codes
+ * This script generates an unique amount of human readable random codes
  * Author: Igor Buyanov
  */
  
