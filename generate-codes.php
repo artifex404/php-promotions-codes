@@ -15,8 +15,8 @@ $settings['amount_of_letters']	= 4;
 $settings['amount_of_numbers']	= 2;
 
 // Some characters intentionally left out to enhance code readability
-$settings['chars']	= "abcdefghjklmnpqrstuvwxyz";
-$settings['numbers']	= "23456789";
+$settings['chars']	 = "abcdefghjkmnpqrtuvwxyz";
+$settings['numbers'] = "2346789";
 
 
 function generate_codes($settings) {
@@ -38,11 +38,11 @@ function generate_codes($settings) {
 	while (count($codes) < $settings['number_of_codes']) {
 	
 		$tmp_code = '';
-	
-		foreach ($characters as $name => $set) {
-			for ( $i = 0; $i < $set['count']; $i++ ) {
-				$tmp_code .= $set['characters'][rand( 0, strlen( $set['characters'] ) - 1 )];
-			}
+        $lengh_of_code = $settings['amount_of_letters'] + $settings['amount_of_numbers'];
+        $array_keys = array_keys($characters);
+        for ($p = 0; $p < $lengh_of_code; $p++) {
+    		$set = $characters[$array_keys[rand(0, count($characters) - 1)]];
+            $tmp_code .= $set['characters'][rand(0, strlen($set['characters']) - 1)];
 		}
 		
 		if (!in_array($tmp_code, $codes)) $codes[] = $tmp_code;
@@ -56,4 +56,4 @@ function generate_codes($settings) {
 $codes = generate_codes($settings);
 
 // Output unique codes
-foreach ($codes as $code) echo $code."<br>";
+foreach ($codes as $code) echo $code."\n";
